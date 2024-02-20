@@ -1,0 +1,16 @@
+.main-page__more{
+    border: 1px solid #424242;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: transparent;
+    padding: 10px 147px;
+    border-radius: 6px;
+    margin: 0 0 80px 0;
+}
+
+@media screen and (max-width:750px){
+    .main-page__more{
+        padding: 10px 107px;
+    }
+}

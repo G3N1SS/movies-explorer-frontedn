@@ -1,0 +1,14 @@
+.container_intro{
+  display: flex;
+  gap:15%;
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (max-width:970px){
+  .container_intro{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 48px;
+  }
+}

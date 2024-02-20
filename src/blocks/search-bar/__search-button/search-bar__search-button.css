@@ -1,0 +1,14 @@
+.search-bar__search-button{
+    background: #4285F4;
+    border: none;
+    border-radius: 50px;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.search-bar__search-button:hover{
+    transform: scale(1.05);
+}
