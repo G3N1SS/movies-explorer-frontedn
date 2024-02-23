@@ -8,7 +8,6 @@
     margin: 0;
     color: white;
     transition: all .25s;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
     animation: appearing 1.2s ease-in-out;
     box-sizing: border-box;
 }
@@ -17,6 +16,7 @@
     transition: all .25s;
     opacity: 0.8;
     transform: scale(1.03);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .login__input:active{

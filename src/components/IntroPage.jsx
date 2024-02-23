@@ -9,10 +9,12 @@ function IntroPage(){
   return(
     <>
       <Header/>
-      <Intro/>
-      <About/>
-      <Technology/>
-      <Student/>
+      <main>
+        <Intro/>
+        <About/>
+        <Technology/>
+        <Student/>
+      </main>
       <Footer/>
     </>
   )

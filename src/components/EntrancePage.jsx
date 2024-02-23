@@ -6,7 +6,7 @@ export default function EntrancePage({name, children}){
   return(
     <section className="login">
       <div className="container container_login">
-        <Link to={'/'} className='login__logo'><img src={logo} alt=""/></Link>
+        <Link to={'/'} className='login__logo'><img src={logo} alt="logo"/></Link>
         <h2 className="login__title">{name === 'sign-up' ? 'Добро пожаловать!' :  'Рады видеть!'}</h2>
         <Form
           name={name}

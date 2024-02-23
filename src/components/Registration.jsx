@@ -6,12 +6,15 @@ export default function Registration({name}){
     <EntrancePage name={name}>
       <Input
         name={'name'}
+        placeholder={'Введите ваше имя'}
       />
       <Input
         name={'email'}
+        placeholder={'E-Mail'}
       />
       <Input
         name={'password'}
+        placeholder={'Пароль'}
       />
     </EntrancePage>
   )

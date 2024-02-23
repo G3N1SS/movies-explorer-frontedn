@@ -10,7 +10,6 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.56px;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.15);
     transition: all .5s;
 }
 
@@ -19,6 +18,7 @@
     background:#3DDC84;
     transition: all 1s;
     transform: translateY(-7%);
+    box-shadow: 0  4px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width:970px){

@@ -20,7 +20,7 @@ export default function MainPage({films}){
               <Input
                 name={'search-bar'}
               />
-              <button className="search-bar__search-button"><img src={Icon} alt="" /></button>
+              <button className="search-bar__search-button"><img src={Icon} alt="arrow"/></button>
             </div>
             <div className="search-bar__shortfilms-box">
               <button className="search-bar__shortfilms-button" onClick={off}/>

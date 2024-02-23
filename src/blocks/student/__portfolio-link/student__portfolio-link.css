@@ -5,8 +5,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 19px;
+    border-bottom: 1px solid #424242;
+    padding-bottom: 19px;
 }
 
 .student__portfolio-link:last-of-type{
     margin: 0;
+    border: none;
 }

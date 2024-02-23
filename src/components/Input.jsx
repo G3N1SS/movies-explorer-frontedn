@@ -1,4 +1,4 @@
-export default function Input({name, isInputValid, error}){
+export default function Input({name, isInputValid, error, placeholder}){
   return(
     <>
       {name === 'password' || name === 'email' || name === 'name' ?
@@ -7,6 +7,10 @@ export default function Input({name, isInputValid, error}){
         <input 
           type={name}
           className={`login__input ${isInputValid === undefined || isInputValid ? '' : 'login__input_invalid'}`}
+          required
+          maxLength={30}
+          minLength={2}
+          placeholder={placeholder}
         />
         <span className="login__error error">{error}</span>
       </>
@@ -15,18 +19,22 @@ export default function Input({name, isInputValid, error}){
       <>
         <input 
           type="text" 
-          className={`search-bar__input ${isInputValid === undefined || isInputValid ? '' : 'search-bar__input_invalid'}`}
+          className='search-bar__input'
           placeholder="Фильм"
+          required
         />
-        <span className="search-bar__error error">{error}</span>
       </>
       :
       <>
         <input 
           type="text" 
           className={`profile__input ${isInputValid === undefined || isInputValid ? '' : 'profile__input_invalid'}`}
+          required
+          maxLength={30}
+          minLength={2}
+          placeholder={placeholder}
         />
-        {/* <span className="profile__error error">{error}</span> */}
+        <span className="profile__error error">{error}</span>
       </>}
     </>
   )

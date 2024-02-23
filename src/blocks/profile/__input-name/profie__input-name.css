@@ -3,5 +3,7 @@
     font-size: 11px;
     color: #fff;
     display: inline-block;
+    max-width: max-content;
     margin: 0;
+    grid-area: name;
 }

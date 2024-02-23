@@ -12,11 +12,11 @@ export default function Profile({name}){
           <h2 className="profile__greeting">Привет, {name}</h2>
           <div className="profile__input-box">
             <h3 className="profile__input-name">Имя</h3>
-            <Input/> 
+            <Input placeholder={'Имя'}/> 
           </div>
           <div className="profile__input-box">
             <h3 className="profile__input-name">E-mail</h3>
-            <Input/> 
+            <Input placeholder={'E-mail'}/> 
           </div>
           <button className="profile__edit">Редактировать</button>
           <button className="profile__exit">Выйти из аккаунта</button>

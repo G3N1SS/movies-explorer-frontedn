@@ -11,7 +11,7 @@ export default function Card({films}){
 
   return(
     <li className="main-page__card card">
-      <img src={image} alt="" className="card__img"/>
+      <img src={image} alt="card" className="card__img"/>
       <div className="card__banner">
         <div className="card__text">
           <h3 className="card__title">33 слова о дизайне</h3>
