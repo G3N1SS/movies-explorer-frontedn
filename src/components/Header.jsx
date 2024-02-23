@@ -51,7 +51,7 @@ export default function Header({black}){
                 <p className={`header__account account__caption ${black ? 'account__caption_black' : ''}`}>Аккаунт</p>
                 <img className={`header__account-pic account__pic ${black ? 'account__pic_black' : ''}`} src={account} alt="account"/>
               </Link>
-              <button className={`header__hamburger hamburger ${isVisible ? 'hamburger_active' : ''}`} onClick={hamburgerClick}>
+              <button className={`header__hamburger hamburger ${isVisible ? 'hamburger_active' : ''}`} onClick={hamburgerClick} type="button">
                 <hr className={`hamburger__line ${isVisible ? 'hamburger__line_cross' : ''}`} />
                 {isVisible ? '' : <hr className="hamburger__line" />}
                 <hr className={`hamburger__line ${isVisible ? 'hamburger__line_cross' : ''}`} />

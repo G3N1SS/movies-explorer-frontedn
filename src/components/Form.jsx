@@ -5,11 +5,11 @@ export default  function Form({name, titleButton, children, onSubmit}){
       {children}
       </div>
       {name === 'sign-in' || name === 'sign-up' ? 
-      <button className="login__submit">
+      <button className="login__submit" type="submit">
         {titleButton}
       </button>
       :
-      <button className="profile__submit">
+      <button className="profile__submit" type="submit">
         {titleButton}
       </button>
     }

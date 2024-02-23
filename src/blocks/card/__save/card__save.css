@@ -8,3 +8,7 @@
     transition: all .2s;
     cursor: pointer;
 }
+
+.card__save:hover{
+    transform: scale(1.05);
+}

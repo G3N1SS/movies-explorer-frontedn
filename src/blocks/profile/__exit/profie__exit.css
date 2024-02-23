@@ -5,4 +5,13 @@
     position: relative;
     text-align: center;
     padding: 0;
+    cursor: pointer;
+    transition: all .3s;
+    animation: appearing .5s ease-in-out ;
+    text-decoration: none;
+}
+
+.profile__exit:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
 }

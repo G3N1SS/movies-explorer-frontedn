@@ -16,14 +16,14 @@ export default function MainPage({films}){
       <section className="main-page">
         <div className="container container_main-page">
           <div className="main-page__search-bar search-bar">
-            <div className="search-bar__box">
+            <form className="search-bar__box">
               <Input
                 name={'search-bar'}
               />
               <button className="search-bar__search-button"><img src={Icon} alt="arrow"/></button>
-            </div>
+            </form>
             <div className="search-bar__shortfilms-box">
-              <button className="search-bar__shortfilms-button" onClick={off}/>
+              <button className="search-bar__shortfilms-button" onClick={off} type="button"/>
               <p className="search-bar__shortfilms-caption">Короткометражки</p>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function MainPage({films}){
             <Card films={films}></Card>
           </CardSection>
         </div> 
-        <button className="main-page__more">Ещё</button>
+        <button className="main-page__more" type="button">Ещё</button>
       </section>
       <Footer/>
 

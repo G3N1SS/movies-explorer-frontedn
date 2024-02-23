@@ -9,7 +9,7 @@ function Intro(){
           <p className="intro__caption">Листайте ниже, чтобы узнать больше про этот проект и его создателя.</p>
           <a className="intro__learn-more button" href='#about'>Узнать больше</a>
         </div>
-        <img src={webglobus} alt="globus" className="intro__image" />
+        <img src={webglobus} alt="globus" className="intro__image"/>
       </div>
     </section>
   )
