@@ -7,7 +7,7 @@ function Intro(){
         <div className="intro__info">
           <h1 className="intro__title">Учебный&nbsp;проект студента факультета<br/>Веб-разработки.</h1>
           <p className="intro__caption">Листайте ниже, чтобы узнать больше про этот проект и его создателя.</p>
-          <button className="intro__learn-more button">Узнать больше</button>
+          <a className="intro__learn-more button" href='#about'>Узнать больше</a>
         </div>
         <img src={webglobus} alt="globus" className="intro__image" />
       </div>

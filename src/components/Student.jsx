@@ -11,7 +11,7 @@ function Student(){
           <div className="student__info-about">
             <h2 className="student__name">Арег</h2>
             <p className="student__profession">Фронтенд-разработчик, 17 лет</p>
-            <p className="student__about">Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</p>
+            <p className="student__about">Учусь в школе в одиннадцатом классе. Готовлюсь к ЕГЭ. Увлекаюсь баскетболом и боксом. Планирую поступать в Москву на факультет веб-разработки. Кодить начал из за интереса к технологиям в целом, поэтому захотелось создавать нечто свое.</p>
             <a href="" className="student__github link">Github</a>
           </div>
           <img src={studentimg} alt="studentImage" className="student__info-img" />
@@ -23,12 +23,10 @@ function Student(){
               <a href="https://g3n1ss.github.io/how-to-learn/" className="student__portfolio-link-text link" target="_blank">Статичный сайт</a>
               <a href="https://g3n1ss.github.io/how-to-learn/"  className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
             </li>
-            {/* <div className="underline underline_dark"></div> */}
             <li className="student__portfolio-link">
               <a href="https://g3n1ss.github.io/russian-travel/" className="student__portfolio-link-text link" target="_blank">Адаптивный сайт</a>
               <a href="https://g3n1ss.github.io/russian-travel/" className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
             </li>
-            {/* <div className="underline underline_dark"></div> */}
             <li className="student__portfolio-link">
               <a href="https://areg.nomoredomainsmonster.ru" className="student__portfolio-link-text link" target="_blank">Одностраничное&nbsp;приложение</a>
               <a href="https://areg.nomoredomainsmonster.ru" className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
