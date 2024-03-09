@@ -2,7 +2,7 @@
     background: #202020;
     display: flex;
     justify-content: center;
-    padding: 110px 70px 125px;
+    padding: 110px 70px 0;
     color: white;
 }
 

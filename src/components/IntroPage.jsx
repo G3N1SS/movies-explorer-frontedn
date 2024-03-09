@@ -5,10 +5,12 @@ import Student from './Student'
 import Footer from './Footer'
 import Header from './Header'
 
-function IntroPage(){
+function IntroPage({loggedIn}){
   return(
     <>
-      <Header/>
+      <Header
+        loggedIn={loggedIn}
+      />
       <main>
         <Intro/>
         <About/>

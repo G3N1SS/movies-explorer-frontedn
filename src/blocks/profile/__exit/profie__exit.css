@@ -9,9 +9,18 @@
     transition: all .3s;
     animation: appearing .5s ease-in-out ;
     text-decoration: none;
+    font-size: 13px;
+    display: block;
+    margin: 0 auto;
 }
 
 .profile__exit:hover{
     opacity: 0.8;
     transform: scale(1.05);
+}
+
+@media screen and (max-width:665px){
+    .profie__exit{
+        font-size: 12px;
+    }
 }

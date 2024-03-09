@@ -1,23 +1,48 @@
-import image from "../images/pic__COLOR_pic.png"
+import { Link, useLocation } from "react-router-dom"
+import { useState, useEffect } from "react"
 
-export default function Card({films}){
-  function handleLike(e){
-    e.target.classList.toggle('card__save_active')
+export default function Card({ onDelete, addMovie, data, savedMovies}){
+  const location = useLocation()
+  const [favourite, setFavourite] = useState(false)
+  console.log(savedMovies)
+  console.log(favourite)
+
+  useEffect(() => {
+    if (location.pathname === '/movies')
+      setFavourite(savedMovies.some(element => data.id === element.movieId))
+  }, [savedMovies, data.id, setFavourite, location.pathname])
+
+  function handleLike(){
+    if (savedMovies.some(e => data.id === e.movieId)) {
+      setFavourite(true)
+      addMovie(data)
+    } else {
+      setFavourite(false)
+      addMovie(data)
+    }
   }
 
-  function handleDelete(){
-    console.log('deleted')
+  function convertTime(duration) {
+    const minutes = duration % 60;
+    const hours = Math.floor(duration / 60);
+    return (hours === 0 ? `${minutes}м` : minutes === 0 ? `${hours}ч` : `${hours}ч${minutes}м`)
   }
 
   return(
     <li className="main-page__card card">
-      <img src={image} alt="card" className="card__img"/>
+      <Link to ={data.trailerLink} target="_blank">
+        <img src={location.pathname === '/movies' ? `https://api.nomoreparties.co${data.image.url}` : data.image} alt={data.name} className="card__img"/>
+      </Link>
       <div className="card__banner">
         <div className="card__text">
-          <h3 className="card__title">33 слова о дизайне</h3>
-          <p className="card__duration">1ч42м</p>
+          <h3 className="card__title">{data.nameRU}</h3>
+          <p className="card__duration">{convertTime(data.duration)}</p>
         </div>
-        <button className={`card__save ${films ? "" : "card__save_cross"}`} onClick={films ? handleLike : handleDelete} type="button">{films ? "" : "+"}</button>
+        {location.pathname === '/movies' ?
+          <button type='button' className={`card__save ${favourite ? 'card__save_active' : ''}`} onClick={handleLike}></button>
+            :
+          <button type='button' className={`card__save card__save_cross`} onClick={() => onDelete(data._id)}>+</button>
+        }
       </div>
     </li>
     )

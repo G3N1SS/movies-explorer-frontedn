@@ -6,4 +6,12 @@
     text-decoration: none;
     display: inline-block;
     margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.nothing-found__link:hover{
+    opacity: 0.8;
 }

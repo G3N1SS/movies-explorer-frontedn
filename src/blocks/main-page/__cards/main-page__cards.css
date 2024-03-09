@@ -9,6 +9,8 @@
 @media screen and (max-width:1170px){
     .main-page__cards{
         grid-template-columns: repeat(3, 1fr);
+        max-height: 1250px;
+        overflow: hidden;
     }
 }
 

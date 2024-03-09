@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom"
 
 export default function PageNotFound() {
+  const navigate = useNavigate()
   return (
     <div className="nothing-found">
       <div className="container container_nothing-found">
@@ -11,7 +12,7 @@ export default function PageNotFound() {
         </h2>
         <p className="nothing-found__caption">Страница не найдена</p>
       </div>
-      <Link to="/" className="nothing-found__link link">Назад</Link>
+      <button onClick={() => navigate(-1)} className="nothing-found__link" type="button">Назад</button>
     </div>
   )
 }
