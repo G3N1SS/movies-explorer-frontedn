@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Route, Routes, Link, useNavigate, Navigate, RouterProvider } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate, Navigate, RouterProvider, useLocation } from 'react-router-dom';
 import IntroPage from './IntroPage'
 import Registration from './Registration';
 import Login from './Login';
@@ -16,6 +16,7 @@ import Preloader from './Preloader/Preloader';
 
 function App() {
   const navigate = useNavigate()
+  const {pathname} = useLocation()
   const [loggedIn, setLoggedIn] = useState(false)
   const [isSend, setIsSend] = useState(false)
   const [currentUser, setCurrentUser] = useState({})
@@ -28,6 +29,10 @@ function App() {
   const setSuccess = useCallback(() => {
     setIsSuccess(false)
   }, [])
+
+  useEffect(() => {
+    setIsSend(false)
+  }, [pathname])
 
   useEffect(() => {
     if (localStorage.jwt) {

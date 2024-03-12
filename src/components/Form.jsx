@@ -1,9 +1,10 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, createContext } from "react"
 import { useLocation } from "react-router-dom"
 import CurrentUserContext from "../contexts/CurrentUserContext"
 import SendContext from "../contexts/SendContext"
 import ErrorContext from "../contexts/ErrorContext"
 import Preloader from "./Preloader/Preloader"
+
 
 export default  function Form({name, titleButton, children, onSubmit, setIsError, values, isSuccess, setIsSuccess, setIsEdit, isEdit, isValid}){
   const location = useLocation()
@@ -54,7 +55,7 @@ export default  function Form({name, titleButton, children, onSubmit, setIsError
       <>
         <span className={`profile__error error ${isError ? 'error' : isSuccess && 'profile__error_success'}`}>{isError ? 'При обновлении профиля произошла ошибка.' : 'Успешно'}</span>
         <button className={`profile__submit ${(values.username === currentUser.name && values.email === currentUser.email) || !isValid || isError ? 'profile__submit_disabled' : ''}`} type="submit" disabled={!isValid || isSend || isError}>
-          {isSend ? <Preloader name={'button'}/> : titleButton}
+          {isSend ? <Preloader name={'button'}/> : ''}{titleButton}
         </button>
       </>
       : '' }

@@ -52,6 +52,9 @@
 
 .preloader_type_button {
   padding: 0;
+  left:0;
+  top:0;
+  justify-content: center;
 }
 
 .preloader__container {
@@ -93,8 +96,8 @@
 }
 
 .preloader__container_type_button {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .preloader__container_type_button-small {
@@ -104,19 +107,19 @@
 
 .preloader__round_type_button {
   background: #4285F4;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .preloader__round_type_button::after {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: lightgray;
 }
 
 .preloader__round_type_button::before {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: #4285F4;
 }
 

@@ -8,6 +8,7 @@
     transition: all .4s;
     box-sizing:border-box;
     width: 100%;
+    position: relative;
 }
 
 .login__submit:hover{

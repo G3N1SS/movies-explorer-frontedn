@@ -10,6 +10,7 @@
     width: 100%;
     animation: appearing .5s ease-in-out ;
     transition: all .3s;
+    position: relative;
 }
 
 .profile__submit:hover{
