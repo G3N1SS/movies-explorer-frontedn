@@ -4,21 +4,21 @@ import {
   MaxScreen,
   MediumScreen,
   SmallScreen,
-  CardsMoreMaxScreen,
-  CardsLessMaxScreen,
-  CardsMediumScreen,
-  CardsSmallScreen,
+  InitMoreMaxScreen,
+  InitLessMaxScreen,
+  InitMediumScreen,
+  InitSmallScreen,
   StepMaxScreen,
   StepMediumScreen,
   StepSmallScreen
 } from "../utils/constants"
 import Card from "./Card"
+import Preloader from "./Preloader/Preloader";
 
 export default function CardSection({ movies, onDelete, addMovie, savedMovies, isLoading, serverError, firstEntrance }){
   const location = useLocation();
   const [count, setCount] = useState('')
   const card = movies.slice(0, count)
-  console.log(savedMovies)
 
   useEffect(() => {
     if (location.pathname === '/movies') {
@@ -47,17 +47,17 @@ export default function CardSection({ movies, onDelete, addMovie, savedMovies, i
   }
 
   function viewCards(){
-    const counter = { init: CardsMoreMaxScreen, step: StepMaxScreen }
+    const counter = { init: InitMoreMaxScreen, step: StepMaxScreen }
     if (window.innerWidth < MaxScreen) {
-      counter.init = CardsLessMaxScreen
+      counter.init = InitLessMaxScreen
       counter.step = StepMediumScreen
     }
     if (window.innerWidth < MediumScreen) {
-      counter.init = CardsMediumScreen
+      counter.init = InitMediumScreen
       counter.step = StepSmallScreen
     }
     if (window.innerWidth < SmallScreen) {
-      counter.init = CardsSmallScreen
+      counter.init = InitSmallScreen
       counter.step = StepSmallScreen
     }
     return counter
@@ -66,7 +66,8 @@ export default function CardSection({ movies, onDelete, addMovie, savedMovies, i
   return(
     <>
     <ul className="main-page__cards">
-      {(location.pathname === '/movies' && card.length !== 0) ?
+      {isLoading ? <Preloader/> : 
+      (location.pathname === '/movies' && card.length !== 0) ?
       card.map(data => {
         return (
           <Card
@@ -79,7 +80,7 @@ export default function CardSection({ movies, onDelete, addMovie, savedMovies, i
       })
       :
       movies.length !== 0 ?
-        savedMovies.map(data => {
+        movies.map(data => {
           return (
             <Card
             key={data.id}

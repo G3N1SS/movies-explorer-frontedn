@@ -7,7 +7,7 @@ import Icon from "../images/text__COLOR_invisible.svg"
 import FilterButton from "./FilterButton"
 
 export default function SearchForm({ isCheck, searchedMovie, searchMovies, setIsError, firstEntrance, savedMovie, movies, filter, setIsCheck }){
-    const location = useLocation()
+    const { pathname } = useLocation()
     const isError = useContext(ErrorContext)
     const { values, handleChange, reset } = useFormValidation()
   
@@ -18,7 +18,7 @@ export default function SearchForm({ isCheck, searchedMovie, searchMovies, setIs
         reset({ search: searchedMovie })
       }
       setIsError(false)
-    }, [searchedMovie, reset, setIsError, location.pathname, savedMovie])
+    }, [searchedMovie, reset, setIsError, pathname, savedMovie])
   
     function onSubmit(evt) {
       evt.preventDefault()
@@ -52,9 +52,12 @@ export default function SearchForm({ isCheck, searchedMovie, searchMovies, setIs
             }}
             required
             type={'text'}
+            disabled={savedMovie ? (savedMovie.length === 0 && true) : false}
         />
+        {console.log(values.search)}
         <button type='submit' className={`search-bar__search-button ${savedMovie ? (location.pathname === '/saved-movies' && savedMovie.length === 0) && 'search-bar__search-button_disabled' : ''}`}><img src={Icon} alt="arrow"/></button>
       </form>
+      <span className={`search-bar__error error ${isError && 'search-bar__error_active'}`}>{'Введите ключевое слово'}</span>
       <FilterButton changeShort={changeShort} firstEntrance={firstEntrance} isCheck={isCheck}/>
     </div>
   )

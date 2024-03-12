@@ -4,8 +4,6 @@ import { useState, useEffect } from "react"
 export default function Card({ onDelete, addMovie, data, savedMovies}){
   const location = useLocation()
   const [favourite, setFavourite] = useState(false)
-  console.log(savedMovies)
-  console.log(favourite)
 
   useEffect(() => {
     if (location.pathname === '/movies')

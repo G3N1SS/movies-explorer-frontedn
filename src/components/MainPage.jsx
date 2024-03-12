@@ -49,7 +49,6 @@ export default function MainPage({ setIsError, addMovie, savedMovies, loggedIn, 
   useEffect(() => {
     if (localStorage.allmovies && localStorage.shorts && localStorage.movie) {
       const movies = JSON.parse(localStorage.allmovies)
-      console.log(movies)
       const search = JSON.parse(localStorage.movie)
       const isCheck = JSON.parse(localStorage.shorts)
       setServerError(false)
@@ -89,7 +88,6 @@ export default function MainPage({ setIsError, addMovie, savedMovies, loggedIn, 
             firstEntrance={firstEntrance}
             onDelete={onDelete}
           />
-          {console.log(filteredMovies)}
         </div> 
       </section>
       </main>

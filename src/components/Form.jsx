@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom"
 import CurrentUserContext from "../contexts/CurrentUserContext"
 import SendContext from "../contexts/SendContext"
 import ErrorContext from "../contexts/ErrorContext"
+import Preloader from "./Preloader/Preloader"
 
 export default  function Form({name, titleButton, children, onSubmit, setIsError, values, isSuccess, setIsSuccess, setIsEdit, isEdit, isValid}){
   const location = useLocation()
@@ -32,7 +33,7 @@ export default  function Form({name, titleButton, children, onSubmit, setIsError
         className={`login__submit ${isValid && !isError ? '' : 'login__sumbit_disabled'}`}
         type="submit"
         disabled={!isValid || isSend || isError}>
-        {titleButton}
+        {isSend ? <Preloader name={'button'}/> : titleButton}
       </button>
       </>
       :
@@ -44,16 +45,16 @@ export default  function Form({name, titleButton, children, onSubmit, setIsError
         type="submit"
         disabled={!isValid || isSend || isError}
         >
-        {titleButton}
+        {isSend ? <Preloader name={'button'}/> : titleButton}
       </button>
       </>
       :
       <>
       {isEdit ? 
       <>
-        <span className={`profile__error ${isError ? 'error' : isSuccess && 'profile__error'}`}></span>
-        <button className="profile__submit" type="submit">
-          {titleButton}
+        <span className={`profile__error error ${isError ? 'error' : isSuccess && 'profile__error_success'}`}>{isError ? 'При обновлении профиля произошла ошибка.' : 'Успешно'}</span>
+        <button className={`profile__submit ${(values.username === currentUser.name && values.email === currentUser.email) || !isValid || isError ? 'profile__submit_disabled' : ''}`} type="submit" disabled={!isValid || isSend || isError}>
+          {isSend ? <Preloader name={'button'}/> : titleButton}
         </button>
       </>
       : '' }

@@ -11,6 +11,8 @@ import api from '../utils/Api';
 import CurrentUserContext from '../contexts/CurrentUserContext';
 import SendContext from '../contexts/SendContext';
 import ErrorContext from '../contexts/ErrorContext';
+import SavedMovies from './SavedMovies';
+import Preloader from './Preloader/Preloader';
 
 function App() {
   const navigate = useNavigate()
@@ -22,7 +24,7 @@ function App() {
   const [isCheckToken, setIsCheckToken] = useState(true)
   const [isSuccess, setIsSuccess] = useState(false)
   const [isEdit, setIsEdit] = useState(false)
-  console.log(savedMovies)
+
   const setSuccess = useCallback(() => {
     setIsSuccess(false)
   }, [])
@@ -138,6 +140,7 @@ function App() {
 
   return (
     <div className='page'>
+      {isCheckToken ? <Preloader/> :
       <CurrentUserContext.Provider value={currentUser}>
         <SendContext.Provider value={isSend}>
           <ErrorContext.Provider value={isError}>
@@ -181,9 +184,8 @@ function App() {
         />}/>
         <Route path='/saved-movies' element={
           <ProtectedRoute
-            element={MainPage}
+            element={SavedMovies}
             savedMovies={savedMovies}
-            addMovie={handleToggleMovie}
             onDelete={handleDeleteMovie}
             loggedIn={loggedIn}
             setIsError={setIsError}
@@ -194,6 +196,7 @@ function App() {
       </ErrorContext.Provider>
       </SendContext.Provider>
       </CurrentUserContext.Provider>
+    }
     </div>
   )
 }

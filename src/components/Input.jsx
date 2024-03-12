@@ -73,6 +73,7 @@ export default function Input({name, isInputValid, error, placeholder, value, on
           required
           pattern={pattern}
           onChange={onChange}
+          disabled={disabled}
         />
       </>
       }
@@ -87,6 +88,7 @@ export default function Input({name, isInputValid, error, placeholder, value, on
           required
           pattern={pattern}
           onChange={onChange}
+          disabled={disabled}
         />
       </>
       }

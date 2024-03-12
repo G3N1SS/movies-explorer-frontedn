@@ -1,7 +1,7 @@
 .search-bar__box{
     display: flex;
     border-bottom: 1px solid #424242;
-    margin: 0 14px 32px 14px;
+    margin: 0 14px 10px 14px;
     padding-bottom: 13px;
 }
 

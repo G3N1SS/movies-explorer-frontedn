@@ -3,6 +3,7 @@
 @import url(./vendor/animations.css);
 
 @import url(./blocks/button/button.css);
+@import url(./blocks/error/error.css);
 @import url(./blocks/link/_no-arrow/link_no-arrow.css);
 @import url(./blocks/link/link.css);
 @import url(./blocks/link/_footer/link_footer.css);
@@ -44,7 +45,6 @@
 @import url(./blocks/header/__account-pic/header__account-pic.css);
 @import url(./blocks/header/__account-pic/_black/header__account-pic_black.css);
 @import url(./blocks/header/__account/header__account.css);
-
 @import url(./blocks/header/__films/header__films.css);
 /* account */
 @import url(./blocks/account/__pic/_black/account__pic_black.css);
@@ -190,7 +190,6 @@
 
 @import url(./blocks/profile/__error/profie__error.css);
 
-@import url(./blocks/error/error.css);
 @import url(./blocks/login/__error/login__error.css);
 @import url(./blocks/login/__error/_button/login__error_button.css);
 @import url(./blocks/profile/__submit/profile__submit.css);
@@ -198,3 +197,7 @@
 @import url(./blocks/login/__submit/_disabled/login__sumbit_disabled.css);
 @import url(./blocks/main-page/__more/_hidden/main-page__more_hidden.css);
 @import url(./blocks/search-bar/__search-button/_disabled/search-bar__search-button_disabled.css);
+@import url(./blocks/search-bar/__error/search-bar__error.css);
+@import url(./blocks/search-bar/__error/_active/search-bar__error_active.css);
+@import url(./blocks/profile/__submit/_disabled/profile__submit_disabled.css);
+@import url(./blocks/profile/__error/_success/profile__error_success.css);
