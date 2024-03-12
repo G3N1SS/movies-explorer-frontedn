@@ -1,3 +1,4 @@
 .search-bar__shortfilms-button_active{
-    background: url(../../../../images/smalltumb.svg)
+    background: url(../../../../images/smalltumb.svg) #3DDC84;
+    filter: invert(0%);
 }

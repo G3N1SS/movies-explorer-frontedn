@@ -12,7 +12,7 @@ function Student(){
             <h2 className="student__name">Арег</h2>
             <p className="student__profession">Фронтенд-разработчик, 17 лет</p>
             <p className="student__about">Учусь в школе в одиннадцатом классе. Готовлюсь к ЕГЭ. Увлекаюсь баскетболом и боксом. Планирую поступать в Москву на факультет веб-разработки. Кодить начал из за интереса к технологиям в целом, поэтому захотелось создавать нечто свое.</p>
-            <a href="" className="student__github link">Github</a>
+            <a href="https://github.com/G3N1SS" className="student__github link">Github</a>
           </div>
           <img src={studentimg} alt="studentImage" className="student__info-img" />
         </div>

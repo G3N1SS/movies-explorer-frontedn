@@ -52,10 +52,10 @@ export default function SearchForm({ isCheck, searchedMovie, searchMovies, setIs
             }}
             required
             type={'text'}
-            disabled={savedMovie ? (savedMovie.length === 0 && true) : false}
+            // disabled={savedMovie ? (savedMovie.length === 0 && true) : false}
         />
         {console.log(values.search)}
-        <button type='submit' className={`search-bar__search-button ${savedMovie ? (location.pathname === '/saved-movies' && savedMovie.length === 0) && 'search-bar__search-button_disabled' : ''}`}><img src={Icon} alt="arrow"/></button>
+        <button type='submit' className={`search-bar__search-button ${savedMovie ? (location.pathname === '/saved-movies' && savedMovie.length === 0) && 'search-bar__search-button_disabled' : ''}`} disabled={pathname === '/saved-movies' ? (savedMovie.length === 0 ? true : false) : false}><img src={Icon} alt="arrow"/></button>
       </form>
       <span className={`search-bar__error error ${isError && 'search-bar__error_active'}`}>{'Введите ключевое слово'}</span>
       <FilterButton changeShort={changeShort} firstEntrance={firstEntrance} isCheck={isCheck}/>

@@ -9,6 +9,10 @@
     transition: all .3s;
 }
 
+.search-bar__input:focus{
+    outline: none;
+}
+
 @media screen and (max-width:750px){
     .search-bar__input{
         font-size: 18px;
