@@ -22,7 +22,7 @@
 
 @media screen and (max-width:665px){
     .profile__input-box:last-of-type{
-        margin-bottom: 47vh;
+        margin-bottom: 45vh;
         padding: 16px 0 0 0;
     }
     .profile__input-box{

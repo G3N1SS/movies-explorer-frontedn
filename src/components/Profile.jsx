@@ -39,6 +39,7 @@ export default function Profile({name, loggedIn, logOut, editUserData, setIsErro
             setIsEdit={setIsEdit}
             isEdit={isEdit}
             titleButton={'Сохранить'}
+            logOut={logOut}
           >
           <div className="profile__input-box">
             <h3 className="profile__input-name">Имя</h3>
@@ -64,12 +65,6 @@ export default function Profile({name, loggedIn, logOut, editUserData, setIsErro
               disabled={isEdit ? false : true}
             /> 
           </div>
-          {isEdit ? '' : 
-          <>
-          <button className="profile__edit" type="button" onClick={() => setIsEdit(true)}>Редактировать</button>
-          <Link to="/" className="profile__exit" onClick={logOut}>Выйти из аккаунта</Link>
-          </>
-          }
           </Form>
         </div>
       </section>
