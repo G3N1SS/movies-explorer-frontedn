@@ -98,7 +98,7 @@ export default function CardSection({ movies, onDelete, addMovie, savedMovies, i
           : !firstEntrance ?
             <span className='main-page__search-error'>«Сожалеем, но ничего не найдено :(»</span>
               : location.pathname === '/movies' ?
-                <span className='main-page__search-error'>«Чтобы увидеть список фильмов - введите его название в поисковую строку»</span>
+                <span className='main-page__search-error'>«Чтобы отобразить фильм - введите название в поисковую строку»</span>
                 :
                   <span className='main-page__search-error'>«Нет сохранённых фильмов»</span>
       }

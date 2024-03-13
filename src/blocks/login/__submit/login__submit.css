@@ -9,6 +9,7 @@
     box-sizing:border-box;
     width: 100%;
     position: relative;
+    min-height: 30px;
 }
 
 .login__submit:hover{
