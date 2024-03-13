@@ -68,7 +68,7 @@ function App() {
         setIsError(true)
         console.error(`Ошибка при авторизации ${e}`)
       })
-      .finally(() => setIsSend(true))
+      .finally(() => setIsSend(false))
   }
 
   function handleRegister(username, email, password){

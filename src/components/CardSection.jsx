@@ -90,7 +90,17 @@ export default function CardSection({ movies, onDelete, addMovie, savedMovies, i
           )
         })
         :
-        serverError
+        serverError ?
+          <span className='main-page__search-error'>«Во время запроса произошла ошибка.
+            Возможно, проблема с соединением или сервер недоступен.
+            Пожалуйста, подождите немного и попробуйте ещё раз»
+          </span>
+          : !firstEntrance ?
+            <span className='main-page__search-error'>«Сожалеем, но ничего не найдено :(»</span>
+              : location.pathname === '/movies' ?
+                <span className='main-page__search-error'>«Чтобы увидеть список фильмов - введите его название в поисковую строку»</span>
+                :
+                  <span className='main-page__search-error'>«Нет сохранённых фильмов»</span>
       }
     </ul>
     {location.pathname === '/movies' && <button className={`main-page__more ${count >= movies.length ? 'main-page__more_hidden' : ''}`} type="button" onClick={clickMore}>Ещё</button>}

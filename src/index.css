@@ -201,3 +201,4 @@
 @import url(./blocks/search-bar/__error/_active/search-bar__error_active.css);
 @import url(./blocks/profile/__submit/_disabled/profile__submit_disabled.css);
 @import url(./blocks/profile/__error/_success/profile__error_success.css);
+@import url(./blocks/main-page/__search-error/main-page__search-error.css);

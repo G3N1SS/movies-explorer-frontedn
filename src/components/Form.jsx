@@ -14,7 +14,7 @@ export default  function Form({name, titleButton, children, onSubmit, setIsError
 
   useEffect(() => {
     setIsError(false)
-  }, [setIsError])
+  }, [setIsError, values])
 
   useEffect(() => {
     if(location.pathname === '/profile'){
@@ -54,7 +54,7 @@ export default  function Form({name, titleButton, children, onSubmit, setIsError
       {isEdit ? 
       <>
       
-        <button className={`profile__submit ${(values.username === currentUser.name && values.email === currentUser.email) || !isValid || isError ? 'profile__submit_disabled' : ''}`} type="submit" disabled={!isValid || isSend || isError}>
+        <button className={`profile__submit ${(values.username === currentUser.name && values.email === currentUser.email) || !isValid || isError ? 'profile__submit_disabled' : ''}`} type="submit" disabled={(values.username === currentUser.name && values.email === currentUser.email) || !isValid || isError || isSend}>
           {isSend ? <Preloader name={'button'}/> : ''}{titleButton}
         </button>
       </>
