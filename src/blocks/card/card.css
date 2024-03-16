@@ -3,9 +3,10 @@
     border-radius: 10px;
     max-width: 270px;
     animation: appearing .8s;
+    margin: 0 auto;
 }
 
-@media screen and (max-width:950px){
+@media screen and (max-width:970px){
     .card{
         max-width: max-content;
     }
