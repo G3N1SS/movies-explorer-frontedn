@@ -1,5 +1,6 @@
 import studentimg from "../images/picture.jpg"
 import arrow from "../images/arrow.svg"
+import { Link } from "react-router-dom"
 
 function Student(){
   return(
@@ -24,7 +25,7 @@ function Student(){
               <a href="https://g3n1ss.github.io/how-to-learn/"  className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
             </li>
             <li className="student__portfolio-link">
-              <a href="https://g3n1ss.github.io/russian-travel/" className="student__portfolio-link-text link" target="_blank">Адаптивный сайт</a>
+              <Link to='/adaptive' className="student__portfolio-link-text link">Адаптивный сайт</Link>
               <a href="https://g3n1ss.github.io/russian-travel/" className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
             </li>
             <li className="student__portfolio-link">

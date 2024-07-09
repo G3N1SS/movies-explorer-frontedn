@@ -13,11 +13,13 @@ import SendContext from '../contexts/SendContext';
 import ErrorContext from '../contexts/ErrorContext';
 import SavedMovies from './SavedMovies';
 import Preloader from './Preloader/Preloader';
+import { adaptive } from '../utils/constants';
+import Sites from './Sites';
 
 function App() {
   const navigate = useNavigate()
   const {pathname} = useLocation()
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(true)
   const [isSend, setIsSend] = useState(false)
   const [currentUser, setCurrentUser] = useState({})
   const [savedMovies, setSavedMovies] = useState([])
@@ -49,7 +51,6 @@ function App() {
           localStorage.clear()
         })
     } else {
-      setLoggedIn(false)
       setIsCheckToken(false)
       localStorage.clear()
     }
@@ -150,7 +151,7 @@ function App() {
         <SendContext.Provider value={isSend}>
           <ErrorContext.Provider value={isError}>
       <Routes>
-        <Route path='/'
+        <Route path='/movies-explorer-frontend'
           element={
             <IntroPage
               loggedIn={loggedIn}
@@ -196,6 +197,7 @@ function App() {
             setIsError={setIsError}
           />
         }/>
+        <Route path='/adaptive' element={<Sites loggedIn={loggedIn} name={'Адаптивные'} data={adaptive}/>}/>
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
       </ErrorContext.Provider>
