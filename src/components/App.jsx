@@ -150,7 +150,7 @@ function App() {
         <SendContext.Provider value={isSend}>
           <ErrorContext.Provider value={isError}>
       <Routes>
-        <Route path='/'
+        <Route path='/movies-explorer-frontend'
           element={
             <IntroPage
               loggedIn={loggedIn}
