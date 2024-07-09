@@ -18,7 +18,7 @@ export default function Header({black, loggedIn}){
     <>
       <header className={`header ${black ? 'header_black': ''}`}>
         <div className="container container_header">
-          <Link to="/"><img className="header__logo" src={logo} alt="logo"/></Link>
+          <Link to="/movies-explorer-frontend"><img className="header__logo" src={logo} alt="logo"/></Link>
           {loggedIn ? 
           <>
             <div className="header__films">
