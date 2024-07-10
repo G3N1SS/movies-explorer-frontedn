@@ -21,16 +21,16 @@ function Student(){
           <h3 className="student__portfolio-title">Портфолио</h3>
           <ul className="student__portfolio-links">
             <li className="student__portfolio-link">
-              <a href="https://g3n1ss.github.io/how-to-learn/" className="student__portfolio-link-text link" target="_blank">Статичный сайт</a>
+              <a href="https://g3n1ss.github.io/how-to-learn/" className="student__portfolio-link-text link" target="_blank">Статичные сайты</a>
               <a href="https://g3n1ss.github.io/how-to-learn/"  className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
             </li>
             <li className="student__portfolio-link">
-              <Link to='/adaptive' className="student__portfolio-link-text link">Адаптивный сайт</Link>
-              <a href="https://g3n1ss.github.io/russian-travel/" className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
+              <Link to='/adaptive' className="student__portfolio-link-text link">Адаптивные сайты</Link>
+              <Link to='/adaptive' className="student__portfolio-link-icon"><img src={arrow} alt="Ссылка"/></Link>
             </li>
             <li className="student__portfolio-link">
-              <a href="https://areg.nomoredomainsmonster.ru" className="student__portfolio-link-text link" target="_blank">Одностраничное&nbsp;приложение</a>
-              <a href="https://areg.nomoredomainsmonster.ru" className="student__portfolio-link-icon" target="_blank"><img src={arrow} alt="Ссылка"/></a>
+              <Link to='/multipage' className="student__portfolio-link-text link">Многостратичные и функциональные сайты</Link>
+              <Link to='/multipage' className="student__portfolio-link-icon"><img src={arrow} alt="Ссылка"/></Link>
             </li>
           </ul>
         </div>

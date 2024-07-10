@@ -13,7 +13,7 @@ import SendContext from '../contexts/SendContext';
 import ErrorContext from '../contexts/ErrorContext';
 import SavedMovies from './SavedMovies';
 import Preloader from './Preloader/Preloader';
-import { adaptive } from '../utils/constants';
+import { adaptive, multipage } from '../utils/constants';
 import Sites from './Sites';
 
 function App() {
@@ -198,6 +198,7 @@ function App() {
           />
         }/>
         <Route path='/adaptive' element={<Sites loggedIn={loggedIn} name={'Адаптивные'} data={adaptive}/>}/>
+        <Route path='/multipage' element={<Sites loggedIn={loggedIn} name={'Многостраничные и функциональные'} data={multipage}/>}/>
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
       </ErrorContext.Provider>
