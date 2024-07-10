@@ -1,5 +1,9 @@
 import adaptive1 from '../images/russiantravel.jpg'
 import adaptive2 from '../images/gitarist.jpg'
+import adaptive3 from '../images/Architecture.jpg'
+import adaptive4 from '../images/noviy-kovcheg.png'
+import adaptive5 from '../images/focus.jpg'
+import multi from '../images/mesto.png'
 
 const EmailRegex = "^\\S+@\\S+\\.\\S+$"
 const MaxScreen = 1171
@@ -23,8 +27,41 @@ const adaptive =[
     name: 'Портфолио Гитариста',
     link: 'https://g3n1ss.github.io/gitarist-portfolio/',
     img: adaptive2
+  },
+  {
+    name: 'Architecture',
+    link: 'https://g3n1ss.github.io/architecture/',
+    img: adaptive3
+  },
+  {
+    name: 'Сложно сосредоточиться',
+    link: 'https://1zh0ra.github.io/slozhno-sosredotochitsya/',
+    img: adaptive5
   }
 ]
+
+const multipage = [
+  {
+    name: 'Новый Ковчег',
+    link: 'https://g3n1ss.github.io/noviy-kovcheg/',
+    img: adaptive4
+  },
+  {
+    name: 'Mesto Russia',
+    link: 'https://g3n1ss.github.io/mesto/',
+    img: multi
+  }
+]
+
+// const static = [
+//   {
+//     name: 'Научиться учиться',
+//     link: ''
+//   },
+//   {
+
+//   }
+// ]
 
 export {
   EmailRegex,
@@ -38,5 +75,7 @@ export {
   StepMaxScreen,
   StepMediumScreen,
   StepSmallScreen,
-  adaptive
+  adaptive,
+  multipage,
+  static
 }
