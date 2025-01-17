@@ -4,6 +4,9 @@ import adaptive3 from '../images/Architecture.jpg'
 import adaptive4 from '../images/noviy-kovcheg.png'
 import adaptive5 from '../images/focus.jpg'
 import multi from '../images/mesto.png'
+import karti from '../images/karti.png'
+import learn from '../images/learn.png'
+import bakery from '../images/bakery.png'
 
 const EmailRegex = "^\\S+@\\S+\\.\\S+$"
 const MaxScreen = 1171
@@ -20,7 +23,7 @@ const StepSmallScreen = 2
 const adaptive =[
   {
     name: 'Путешествия по России',
-    link: 'https://g3n1ss.github.io/russian-travel/',
+    link: 'https://g3n1ss.github.io/russian-travel-react/#',
     img: adaptive1
   },
   {
@@ -37,6 +40,11 @@ const adaptive =[
     name: 'Сложно сосредоточиться',
     link: 'https://1zh0ra.github.io/slozhno-sosredotochitsya/',
     img: adaptive5
+  },
+  {
+    name: 'Карты подскажут',
+    link: 'https://g3n1ss.github.io/Karti-Podshazhut/',
+    img: karti
   }
 ]
 
@@ -53,15 +61,18 @@ const multipage = [
   }
 ]
 
-// const static = [
-//   {
-//     name: 'Научиться учиться',
-//     link: ''
-//   },
-//   {
-
-//   }
-// ]
+const staticSite = [
+  {
+    name: 'Научиться учиться',
+    link: 'https://g3n1ss.github.io/how-to-learn-react/',
+    img: learn
+  },
+  {
+    name: 'Bakery',
+    link: 'https://g3n1ss.github.io/bakery-landing-page/',
+    img: bakery
+  }
+]
 
 export {
   EmailRegex,
@@ -77,5 +88,5 @@ export {
   StepSmallScreen,
   adaptive,
   multipage,
-  static
+  staticSite
 }

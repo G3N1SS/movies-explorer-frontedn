@@ -10,7 +10,6 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "net-deploy": "vite build && scp -r ./dist/* diploma@178.154.202.172:/home/diploma/frontend",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

@@ -207,4 +207,5 @@
 @import url(./blocks/sites/sites.css);
 @import url(./blocks/sites/__title/sites__title.css);
 @import url(./blocks/sites/__list/sites__list.css);
-@import url(./blocks/sites/__card/sites__card.css)
+@import url(./blocks/sites/__card/sites__card.css);
+@import url(./blocks/sites/__card-button/sites__card-button.css);
